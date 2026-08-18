@@ -1,392 +1,682 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GlobalImport | Global Import & Export</title>
+<title>Global Import | Connecting Business Worldwide</title>
 
-    <meta name="description" content="GlobalImport connects businesses with international import, export and sourcing opportunities.">
+<meta name="description" content="Global Import — connecting businesses, products and opportunities across the world.">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #172033;
-            background: #ffffff;
-            line-height: 1.6;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        header {
-            background: #0b1f3a;
-            color: white;
-            padding: 18px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050914;
+    color: #ffffff;
+    line-height: 1.6;
+}
 
-        .logo {
-            font-size: 26px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
+/* ---------- NAVIGATION ---------- */
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 15px;
-        }
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 
-        nav a:hover {
-            color: #55c2ff;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        .hero {
-            min-height: 600px;
-            background: linear-gradient(
-                rgba(5, 25, 50, 0.82),
-                rgba(5, 25, 50, 0.82)
-            ),
-            url("https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1800&q=80");
+    padding: 20px 7%;
 
-            background-size: cover;
-            background-position: center;
+    background: rgba(5, 9, 20, 0.78);
+    backdrop-filter: blur(15px);
 
-            display: flex;
-            align-items: center;
-            padding: 80px 7%;
-            color: white;
-        }
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
 
-        .hero-content {
-            max-width: 750px;
-        }
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
 
-        .hero h1 {
-            font-size: 58px;
-            line-height: 1.1;
-            margin-bottom: 25px;
-        }
+.logo span {
+    color: #54d6ff;
+}
 
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 35px;
-            color: #e8eef5;
-        }
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
 
-        .buttons a {
-            display: inline-block;
-            padding: 14px 25px;
-            margin-right: 12px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
 
-        .primary {
-            background: #1e9be8;
-            color: white;
-        }
+nav a:hover {
+    color: #54d6ff;
+}
 
-        .secondary {
-            border: 1px solid white;
-            color: white;
-        }
+/* ---------- HERO ---------- */
 
-        section {
-            padding: 75px 7%;
-        }
+.hero {
+    min-height: 100vh;
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
+    display: flex;
+    align-items: center;
 
-        .section-title h2 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
+    padding: 140px 7% 80px;
 
-        .section-title p {
-            color: #667085;
-        }
+    position: relative;
+    overflow: hidden;
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-        }
+    background:
+        radial-gradient(circle at 80% 30%, rgba(40,150,255,0.22), transparent 30%),
+        radial-gradient(circle at 20% 80%, rgba(0,230,200,0.12), transparent 30%),
+        #050914;
+}
 
-        .service {
-            padding: 30px;
-            background: #f5f8fb;
-            border-radius: 10px;
-            text-align: center;
-        }
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border: 1px solid rgba(84,214,255,0.12);
+    border-radius: 50%;
+    right: -180px;
+    top: 120px;
+}
 
-        .service h3 {
-            margin-bottom: 12px;
-            color: #0b1f3a;
-        }
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border: 1px solid rgba(84,214,255,0.08);
+    border-radius: 50%;
+    right: -90px;
+    top: 210px;
+}
 
-        .service p {
-            color: #667085;
-            font-size: 15px;
-        }
+.hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 2;
+}
 
-        .products {
-            background: #f7f9fc;
-        }
+.badge {
+    display: inline-block;
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+    padding: 8px 15px;
+    margin-bottom: 25px;
 
-        .product {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            border: 1px solid #e5e7eb;
-        }
+    border: 1px solid rgba(84,214,255,0.35);
+    border-radius: 30px;
 
-        .product h3 {
-            color: #0b1f3a;
-            margin-bottom: 10px;
-        }
+    color: #54d6ff;
+    font-size: 13px;
+    letter-spacing: 1px;
 
-        .product p {
-            color: #667085;
-        }
+    background: rgba(84,214,255,0.06);
+}
 
-        .cta {
-            background: #0b1f3a;
-            color: white;
-            text-align: center;
-        }
+.hero h1 {
+    font-size: clamp(48px, 7vw, 90px);
+    line-height: 1.02;
+    margin-bottom: 25px;
+    letter-spacing: -3px;
+}
 
-        .cta h2 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
+.hero h1 span {
+    background: linear-gradient(90deg, #ffffff, #54d6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        .cta p {
-            margin-bottom: 25px;
-            color: #dbe6f0;
-        }
+.hero p {
+    max-width: 680px;
+    color: #aab6c9;
+    font-size: 19px;
+    margin-bottom: 35px;
+}
 
-        footer {
-            background: #061426;
-            color: #b8c5d4;
-            text-align: center;
-            padding: 30px;
-            font-size: 14px;
-        }
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
-        @media (max-width: 900px) {
-            .services {
-                grid-template-columns: repeat(2, 1fr);
-            }
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 8px;
 
-            .product-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+    text-decoration: none;
+    font-weight: 700;
 
-            .hero h1 {
-                font-size: 45px;
-            }
-        }
+    transition: 0.3s;
+}
 
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
+.btn-primary {
+    background: #54d6ff;
+    color: #041019;
+}
 
-            nav a {
-                margin: 0 8px;
-                font-size: 13px;
-            }
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(84,214,255,0.25);
+}
 
-            .hero {
-                min-height: 520px;
-            }
+.btn-secondary {
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #ffffff;
+}
 
-            .hero h1 {
-                font-size: 38px;
-            }
+.btn-secondary:hover {
+    border-color: #54d6ff;
+    color: #54d6ff;
+}
 
-            .hero p {
-                font-size: 17px;
-            }
+/* ---------- SECTIONS ---------- */
 
-            .services,
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+section {
+    padding: 100px 7%;
+}
+
+.section-title {
+    max-width: 700px;
+    margin-bottom: 55px;
+}
+
+.section-title small {
+    color: #54d6ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: clamp(34px, 5vw, 55px);
+    margin-top: 10px;
+}
+
+.section-title p {
+    color: #9ca9bc;
+    margin-top: 15px;
+}
+
+/* ---------- CARDS ---------- */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    padding: 35px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.07),
+        rgba(255,255,255,0.025)
+    );
+
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+
+    transition: 0.35s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(84,214,255,0.4);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+.card-number {
+    color: #54d6ff;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #9ca9bc;
+}
+
+/* ---------- VISION ---------- */
+
+.vision {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(84,214,255,0.07),
+            transparent
+        );
+}
+
+.vision-box {
+    max-width: 1000px;
+
+    padding: 55px;
+
+    border: 1px solid rgba(84,214,255,0.15);
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.025);
+}
+
+.vision-box p {
+    font-size: 25px;
+    color: #d9e4f3;
+}
+
+/* ---------- STATS ---------- */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.stat {
+    text-align: center;
+    padding: 30px;
+}
+
+.stat strong {
+    display: block;
+    font-size: 42px;
+    color: #54d6ff;
+}
+
+.stat span {
+    color: #8996aa;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact {
+    text-align: center;
+
+    background:
+        radial-gradient(circle at center, rgba(84,214,255,0.1), transparent 45%);
+}
+
+.contact h2 {
+    font-size: clamp(38px, 6vw, 65px);
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: #9ca9bc;
+    max-width: 650px;
+    margin: auto auto 30px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    padding: 35px 7%;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    color: #718096;
+    font-size: 14px;
+}
+
+footer strong {
+    color: #ffffff;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 800px) {
+
+    nav ul {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .vision-box {
+        padding: 30px;
+    }
+
+    .vision-box p {
+        font-size: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">GLOBALIMPORT</div>
+<!-- NAVIGATION -->
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+<nav>
+
+    <div class="logo">
+        GLOBAL<span>IMPORT</span>
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">What We Do</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- HERO -->
 
 <section class="hero" id="home">
+
     <div class="hero-content">
 
-        <h1>Connecting Global Markets Through Trusted Trade</h1>
+        <div class="badge">
+            GLOBAL CONNECTIONS • NEW OPPORTUNITIES
+        </div>
+
+        <h1>
+            Connecting the
+            <span>World of Business.</span>
+        </h1>
 
         <p>
-            GlobalImport provides international sourcing,
-            import and export solutions for businesses around the world.
+            Global Import is built around a simple idea:
+            connecting products, businesses and opportunities
+            across borders to create a more connected future.
         </p>
 
         <div class="buttons">
-            <a href="#products" class="primary">Explore Products</a>
-            <a href="#contact" class="secondary">Request a Quote</a>
+
+            <a href="#about" class="btn btn-primary">
+                Discover Global Import
+            </a>
+
+            <a href="#contact" class="btn btn-secondary">
+                Get in Touch
+            </a>
+
         </div>
 
     </div>
+
 </section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="section-title">
+
+        <small>Who We Are</small>
+
+        <h2>
+            Built for a connected world.
+        </h2>
+
+        <p>
+            Global Import is focused on creating connections between
+            markets, businesses and opportunities around the world.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-number">01</div>
+
+            <h3>Global Reach</h3>
+
+            <p>
+                Exploring opportunities beyond borders and connecting
+                businesses with the wider global marketplace.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-number">02</div>
+
+            <h3>Trusted Connections</h3>
+
+            <p>
+                Building meaningful relationships based on reliability,
+                transparency and long-term thinking.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-number">03</div>
+
+            <h3>Future Focused</h3>
+
+            <p>
+                Combining global commerce with modern technology and
+                new ideas to prepare for what comes next.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHAT WE DO -->
 
 <section id="services">
 
     <div class="section-title">
-        <h2>What We Do</h2>
-        <p>Supporting businesses with international trade and sourcing solutions.</p>
+
+        <small>What We Do</small>
+
+        <h2>
+            Opportunities without borders.
+        </h2>
+
+        <p>
+            Our approach is centered around discovering,
+            developing and connecting opportunities.
+        </p>
+
     </div>
 
-    <div class="services">
 
-        <div class="service">
-            <h3>Global Sourcing</h3>
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-number">01</div>
+
+            <h3>Import & Trade</h3>
+
             <p>
-                Helping businesses identify products and sourcing opportunities
-                across international markets.
+                Connecting products and markets while exploring
+                efficient international trade opportunities.
             </p>
+
         </div>
 
-        <div class="service">
-            <h3>Export Solutions</h3>
+
+        <div class="card">
+
+            <div class="card-number">02</div>
+
+            <h3>Business Connections</h3>
+
             <p>
-                Connecting quality products with international buyers and markets.
+                Creating connections between people and organizations
+                looking toward new markets and possibilities.
             </p>
+
         </div>
 
-        <div class="service">
-            <h3>Import Solutions</h3>
-            <p>
-                Supporting businesses looking to source products internationally.
-            </p>
-        </div>
 
-        <div class="service">
-            <h3>Trade Support</h3>
+        <div class="card">
+
+            <div class="card-number">03</div>
+
+            <h3>New Ideas</h3>
+
             <p>
-                Helping simplify the international trading process from sourcing
-                to delivery coordination.
+                Exploring technology, innovation and ideas that can
+                shape the future of global business.
             </p>
+
         </div>
 
     </div>
 
 </section>
 
-<section class="products" id="products">
+
+<!-- VISION -->
+
+<section class="vision" id="vision">
 
     <div class="section-title">
-        <h2>Product Categories</h2>
-        <p>Explore the categories we can source and trade according to buyer requirements.</p>
+
+        <small>Our Vision</small>
+
+        <h2>
+            Think globally. Build for tomorrow.
+        </h2>
+
     </div>
 
-    <div class="product-grid">
 
-        <div class="product">
-            <h3>Agriculture & Food</h3>
-            <p>
-                Agricultural commodities, food products, spices and other
-                permitted products.
-            </p>
-        </div>
+    <div class="vision-box">
 
-        <div class="product">
-            <h3>Textiles & Garments</h3>
-            <p>
-                Fabrics, apparel, home textiles and made-to-order products.
-            </p>
-        </div>
+        <p>
+            We believe the future belongs to businesses that can
+            connect people, technology and opportunity across borders.
+            Global Import aims to be part of that future.
+        </p>
 
-        <div class="product">
-            <h3>Industrial Goods</h3>
-            <p>
-                Industrial supplies, packaging materials and manufacturing-related goods.
-            </p>
-        </div>
 
-        <div class="product">
-            <h3>Consumer Products</h3>
-            <p>
-                General consumer products and household goods.
-            </p>
-        </div>
+        <div class="stats">
 
-        <div class="product">
-            <h3>Handicrafts & Home</h3>
-            <p>
-                Handcrafted products, home décor and traditional products.
-            </p>
-        </div>
+            <div class="stat">
 
-        <div class="product">
-            <h3>Custom Sourcing</h3>
-            <p>
-                Tell us what you need and we can explore suitable sourcing
-                opportunities.
-            </p>
+                <strong>01</strong>
+
+                <span>Global Mindset</span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>∞</strong>
+
+                <span>Possibilities</span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>24/7</strong>
+
+                <span>Connected World</span>
+
+            </div>
+
         </div>
 
     </div>
 
 </section>
 
-<section class="cta" id="contact">
 
-    <h2>Looking for a Product?</h2>
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2>
+        Let's build something global.
+    </h2>
 
     <p>
-        Tell us what you are looking for and let GlobalImport explore
-        international sourcing opportunities for your business.
+        Interested in connecting with Global Import?
+        Get in touch and let's explore the possibilities.
     </p>
 
-    <div class="buttons">
-        <a href="mailto:info@globalimport.in" class="primary">
-            Request a Quote
-        </a>
-    </div>
+    <a
+        href="mailto:Letalgearhr@gmail.com"
+        class="btn btn-primary"
+    >
+        Contact Global Import
+    </a>
 
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
-    <p>© 2026 GlobalImport. All rights reserved.</p>
-    <p>Global Import & Export Solutions</p>
+
+    <div>
+        © 2026 <strong>Global Import</strong>
+    </div>
+
+    <div>
+        globalimport.in
+    </div>
+
 </footer>
 
 </body>
