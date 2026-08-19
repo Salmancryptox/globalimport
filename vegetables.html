@@ -200,13 +200,22 @@
       background: var(--light);
     }
 
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
+   .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
 
-    .product-card {
+.vegetable-image {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto 35px;
+    border-radius: 18px;
+}
+
+.product-card {
       background: white;
       border: 1px solid var(--line);
       border-radius: 15px;
@@ -419,6 +428,7 @@
         </p>
       </div>
 
+      <img src="Vegetable.png" alt="Fresh Indian vegetables for export" class="vegetable-image">
       <div class="product-grid">
 
         <div class="product-card">
