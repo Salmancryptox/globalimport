@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Global Import supplies fresh Indian vegetables to Saudi Arabia and Gulf markets with reliable export sourcing and international logistics.">
+
+  <title>Fresh Vegetables Export | Global Import</title>
+
+  <style>
+    :root {
+      --green: #168a55;
+      --dark: #092b1b;
+      --light: #f4faf6;
+      --text: #183326;
+      --muted: #64756b;
+      --white: #ffffff;
+      --line: #dfe9e3;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      color: var(--dark);
+    }
+
+    .logo span {
+      color: var(--green);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .quote-btn {
+      background: var(--green);
+      color: white;
+      padding: 10px 17px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #eaf8ef, #ffffff);
+      padding: 90px 24px;
+    }
+
+    .hero-content {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #d9f1e3;
+      color: #11663f;
+      padding: 7px 13px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 1.05;
+      color: var(--dark);
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: var(--muted);
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 21px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: white;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--green);
+      color: var(--green);
+      background: white;
+    }
+
+    .hero-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 35px;
+      box-shadow: 0 18px 45px rgba(20, 60, 40, 0.10);
+    }
+
+    .hero-card .emoji {
+      font-size: 70px;
+      margin-bottom: 18px;
+    }
+
+    .hero-card h2 {
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .hero-card p {
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+
+    section {
+      padding: 75px 24px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 45px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .products {
+      background: var(--light);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      padding: 28px;
+    }
+
+    .product-icon {
+      font-size: 43px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      color: var(--dark);
+      margin-bottom: 9px;
+      font-size: 21px;
+    }
+
+    .product-card p {
+      color: var(--muted);
+    }
+
+    .markets {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .market-card {
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+
+    .market-card h3 {
+      color: var(--dark);
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .market-card p {
+      color: var(--muted);
+    }
+
+    .process {
+      background: var(--dark);
+      color: white;
+    }
+
+    .process .section-title h2 {
+      color: white;
+    }
+
+    .process .section-title p {
+      color: #c8d8cf;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      padding: 25px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 14px;
+    }
+
+    .step-number {
+      color: #7ee2ac;
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .step h3 {
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: #c8d8cf;
+      font-size: 14px;
+    }
+
+    .cta {
+      text-align: center;
+      background: #eaf8ef;
+    }
+
+    .cta h2 {
+      color: var(--dark);
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    footer {
+      background: #061c12;
+      color: #b9c9c0;
+      padding: 30px 24px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media (max-width: 800px) {
+      .nav {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero-content,
+      .markets {
+        grid-template-columns: 1fr;
+      }
+
+      .product-grid,
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .product-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 60px 20px;
+      }
+
+      section {
+        padding: 55px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="index.html" class="logo">Global<span>Import</span></a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="vegetables.html">Vegetables</a>
+      <a href="#">Spices</a>
+      <a href="#">Textiles</a>
+      <a href="#contact" class="quote-btn">Get a Quote</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-content">
+
+      <div>
+        <span class="tag">INDIA → SAUDI ARABIA & GULF</span>
+
+        <h1>Fresh Indian Vegetables for Global Markets</h1>
+
+        <p>
+          Global Import connects trusted Indian agricultural suppliers
+          with buyers across Saudi Arabia and the Gulf region.
+          We focus on quality sourcing, reliable supply and international trade.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Request a Quote</a>
+          <a href="#products" class="btn btn-secondary">Explore Products</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="emoji">🥬🥕🌶️</div>
+        <h2>Farm to International Market</h2>
+        <p>
+          Carefully sourced vegetables from India for wholesalers,
+          distributors, retailers and food businesses.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="products" class="products">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Vegetables We Can Source</h2>
+        <p>
+          Our sourcing network can support different vegetable
+          requirements depending on season, destination and order volume.
+        </p>
+      </div>
+
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="product-icon">🧅</div>
+          <h3>Onions</h3>
+          <p>
+            Indian onions suitable for wholesale and international
+            distribution requirements.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icon">🥔</div>
+          <h3>Potatoes</h3>
+          <p>
+            Sourced according to buyer specifications, quantity and
+            destination-market requirements.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icon">🌶️</div>
+          <h3>Green Chillies</h3>
+          <p>
+            Fresh Indian chillies for food distributors and commercial
+            buyers.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icon">🍅</div>
+          <h3>Tomatoes</h3>
+          <p>
+            Fresh produce sourcing based on availability, quality and
+            buyer requirements.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icon">🥕</div>
+          <h3>Carrots</h3>
+          <p>
+            Vegetable sourcing for wholesalers, distributors and
+            commercial food businesses.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icon">🥦</div>
+          <h3>Seasonal Vegetables</h3>
+          <p>
+            Ask us about additional vegetables available for export
+            depending on season and destination.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Our Target Markets</h2>
+        <p>
+          We aim to build long-term relationships between Indian suppliers
+          and international buyers.
+        </p>
+      </div>
+
+      <div class="markets">
+
+        <div class="market-card">
+          <h3>🇸🇦 Saudi Arabia</h3>
+          <p>
+            Supplying fresh Indian vegetables to importers, wholesalers,
+            distributors and food businesses in Saudi Arabia.
+          </p>
+        </div>
+
+        <div class="market-card">
+          <h3>🌍 Gulf Countries</h3>
+          <p>
+            Exploring opportunities across the GCC and connecting Indian
+            agricultural supply with established regional buyers.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>How We Work</h2>
+        <p>
+          A straightforward approach to international sourcing and trade.
+        </p>
+      </div>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-number">01</div>
+          <h3>Buyer Requirement</h3>
+          <p>
+            We understand the product, quantity, destination and
+            specifications required by the buyer.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">02</div>
+          <h3>Supplier Sourcing</h3>
+          <p>
+            We identify suitable Indian suppliers based on the
+            requirement.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">03</div>
+          <h3>Quality & Logistics</h3>
+          <p>
+            We coordinate commercial details and export logistics with
+            the relevant parties.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">04</div>
+          <h3>International Trade</h3>
+          <p>
+            We work toward reliable transactions and long-term
+            international business relationships.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <div class="container">
+
+      <h2>Looking for Indian Vegetables?</h2>
+
+      <p>
+        Tell us what you need, where you need it and the approximate
+        quantity. We'll get back to you with the next steps.
+      </p>
+
+      <a
+        href="mailto:Mubarak@globalimport.in?subject=Vegetable%20Export%20Enquiry"
+        class="btn btn-primary">
+        Send an Export Enquiry
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    <strong>Global Import</strong> — Connecting businesses, products
+    and opportunities across the world.
+  </p>
+</footer>
+
+</body>
+</html>
