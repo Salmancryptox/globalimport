@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Global Import connects international buyers and suppliers through agricultural products, Indian spices and global textile sourcing.">
+
+  <title>About Us | Global Import</title>
+
+  <style>
+    :root {
+      --ink: #0b1220;
+      --muted: #657084;
+      --line: #e7ebf1;
+      --soft: #f5f7fa;
+      --accent: #16a085;
+      --accent2: #0b6e61;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* Navigation */
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,0.96);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent2);
+    }
+
+    .nav-button {
+      background: var(--accent);
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #f5fbf9, #ffffff);
+      padding: 90px 0 80px;
+    }
+
+    .hero-content {
+      max-width: 820px;
+    }
+
+    .eyebrow {
+      color: var(--accent2);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: var(--muted);
+      max-width: 720px;
+    }
+
+    /* Main sections */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 38px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .section-text {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 820px;
+    }
+
+    .story {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .story p {
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    /* Business areas */
+    .soft-section {
+      background: var(--soft);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 30px;
+    }
+
+    .card-number {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    /* Values */
+    .values {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .value {
+      padding: 28px;
+      border-left: 3px solid var(--accent);
+      background: #fff;
+    }
+
+    .value h3 {
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    .value p {
+      color: var(--muted);
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--ink);
+      color: white;
+      border-radius: 18px;
+      padding: 55px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #cbd3df;
+      max-width: 650px;
+      margin: 0 auto 28px;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: var(--accent);
+      padding: 13px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    @media (max-width: 800px) {
+      .nav-links {
+        gap: 12px;
+        font-size: 13px;
+      }
+
+      .story,
+      .cards,
+      .values {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .cta {
+        padding: 38px 25px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">
+          Global<span>Import</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="index.html#products">Products</a>
+          <a href="index.html#contact" class="nav-button">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">About Global Import</div>
+
+          <h1>
+            Connecting businesses across borders.
+          </h1>
+
+          <p>
+            Global Import is building connections between trusted suppliers,
+            international buyers and opportunities across global markets.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container">
+        <div class="story">
+
+          <div>
+            <div class="eyebrow">Who We Are</div>
+
+            <h2 class="section-title">
+              Built for international trade.
+            </h2>
+          </div>
+
+          <div>
+            <p>
+              Global Import focuses on connecting businesses with products
+              and sourcing opportunities across international markets.
+            </p>
+
+            <p>
+              Our approach is simple: understand what buyers need, identify
+              suitable suppliers and help create reliable connections
+              between markets.
+            </p>
+
+            <p>
+              From agricultural products and Indian spices to textiles and
+              garments, we aim to make international sourcing more accessible
+              for businesses looking to expand beyond their local markets.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="soft-section" id="business">
+      <div class="container">
+
+        <div class="eyebrow">Our Business</div>
+
+        <h2 class="section-title">
+          Three areas of global trade.
+        </h2>
+
+        <p class="section-text">
+          We are developing Global Import around focused product categories
+          and international sourcing opportunities.
+        </p>
+
+
+        <div class="cards">
+
+          <div class="card">
+            <div class="card-number">01</div>
+
+            <h3>Fresh Vegetables</h3>
+
+            <p>
+              Sourcing fresh agricultural products from India for buyers,
+              distributors and businesses across Saudi Arabia and Gulf markets.
+            </p>
+          </div>
+
+
+          <div class="card">
+            <div class="card-number">02</div>
+
+            <h3>Indian Spices</h3>
+
+            <p>
+              Connecting international buyers with Indian masalas and spices,
+              with a focus on European market opportunities and destination
+              requirements.
+            </p>
+          </div>
+
+
+          <div class="card">
+            <div class="card-number">03</div>
+
+            <h3>Textiles & Garments</h3>
+
+            <p>
+              Helping buyers discover textile and garment sourcing
+              opportunities from suppliers across international markets.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container">
+
+        <div class="eyebrow">Our Approach</div>
+
+        <h2 class="section-title">
+          What we believe in.
+        </h2>
+
+        <div class="values">
+
+          <div class="value">
+            <h3>Reliable Connections</h3>
+            <p>
+              Building professional relationships between buyers and
+              suppliers is at the heart of what we do.
+            </p>
+          </div>
+
+          <div class="value">
+            <h3>Global Perspective</h3>
+            <p>
+              We look beyond individual markets to identify opportunities
+              for international trade and sourcing.
+            </p>
+          </div>
+
+          <div class="value">
+            <h3>Long-Term Relationships</h3>
+            <p>
+              Our goal is to develop lasting business relationships rather
+              than one-time transactions.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container">
+
+        <div class="cta">
+
+          <h2>Looking for a global sourcing partner?</h2>
+
+          <p>
+            Tell us what you are looking to buy or sell and let's explore
+            the right international opportunity.
+          </p>
+
+          <a href="index.html#contact">
+            Contact Global Import
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+
+        <div>
+          © 2026 Global Import. All rights reserved.
+        </div>
+
+        <div>
+          International Trade & Sourcing
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
