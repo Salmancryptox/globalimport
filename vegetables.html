@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Global Import supplies fresh Indian vegetables to Saudi Arabia and Gulf markets with reliable export sourcing and international logistics.">
+  <meta name="description"
+        content="Global Import connects Indian farms and agricultural suppliers with international buyers. Explore fresh seasonal vegetables available for direct export and advance pre-booking.">
 
-  <title>Fresh Vegetables Export | Global Import</title>
+  <title>Fresh Farm Vegetables | Global Import</title>
 
   <style>
     :root {
@@ -17,6 +18,7 @@
       --muted: #64756b;
       --white: #ffffff;
       --line: #dfe9e3;
+      --gold: #d49b20;
     }
 
     * {
@@ -83,6 +85,8 @@
       border-radius: 8px;
       font-weight: 700;
     }
+
+    /* HERO */
 
     .hero {
       background: linear-gradient(135deg, #eaf8ef, #ffffff);
@@ -156,7 +160,7 @@
     }
 
     .hero-card .emoji {
-      font-size: 70px;
+      font-size: 65px;
       margin-bottom: 18px;
     }
 
@@ -170,6 +174,8 @@
       margin-bottom: 0;
     }
 
+    /* GENERAL SECTIONS */
+
     section {
       padding: 75px 24px;
     }
@@ -181,7 +187,7 @@
 
     .section-title {
       text-align: center;
-      max-width: 720px;
+      max-width: 780px;
       margin: 0 auto 45px;
     }
 
@@ -196,48 +202,174 @@
       font-size: 17px;
     }
 
-    .products {
-      background: var(--light);
+    /* PRE BOOKING */
+
+    .prebook {
+      background: var(--dark);
+      color: white;
     }
 
-   .product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
+    .prebook .section-title h2 {
+      color: white;
+    }
 
-.vegetable-image {
-    display: block;
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    margin: 0 auto 35px;
-    border-radius: 18px;
-}
+    .prebook .section-title p {
+      color: #c8d8cf;
+    }
 
-.product-card {
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 15px;
+    .prebook-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .prebook-card {
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 16px;
       padding: 28px;
+      background: rgba(255,255,255,0.04);
     }
 
-    .product-icon {
-      font-size: 43px;
-      margin-bottom: 15px;
+    .prebook-icon {
+      font-size: 42px;
+      margin-bottom: 14px;
     }
 
-    .product-card h3 {
-      color: var(--dark);
+    .prebook-card h3 {
       margin-bottom: 9px;
       font-size: 21px;
     }
 
-    .product-card p {
-      color: var(--muted);
+    .prebook-card p {
+      color: #c8d8cf;
     }
 
+    /* PRODUCTS */
+
+    .products {
+      background: var(--light);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(20, 60, 40, 0.12);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-content {
+      padding: 28px;
+    }
+
+    .status {
+      display: inline-block;
+      background: #fff3cd;
+      color: #795900;
+      padding: 6px 11px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 13px;
+    }
+
+    .product-content h3 {
+      color: var(--dark);
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .product-content p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .product-details {
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+      margin-top: 15px;
+    }
+
+    .product-details div {
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .product-details strong {
+      color: var(--dark);
+    }
+
+    .product-button {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--green);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    /* HOW IT WORKS */
+
+    .process {
+      background: white;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--white);
+    }
+
+    .step-number {
+      color: var(--green);
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .step h3 {
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* MARKETS */
+
     .markets {
+      background: var(--light);
+    }
+
+    .market-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 30px;
@@ -247,6 +379,7 @@
       padding: 32px;
       border: 1px solid var(--line);
       border-radius: 16px;
+      background: white;
     }
 
     .market-card h3 {
@@ -259,46 +392,7 @@
       color: var(--muted);
     }
 
-    .process {
-      background: var(--dark);
-      color: white;
-    }
-
-    .process .section-title h2 {
-      color: white;
-    }
-
-    .process .section-title p {
-      color: #c8d8cf;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .step {
-      padding: 25px;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 14px;
-    }
-
-    .step-number {
-      color: #7ee2ac;
-      font-size: 28px;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-
-    .step h3 {
-      margin-bottom: 8px;
-    }
-
-    .step p {
-      color: #c8d8cf;
-      font-size: 14px;
-    }
+    /* CTA */
 
     .cta {
       text-align: center;
@@ -314,7 +408,12 @@
     .cta p {
       color: var(--muted);
       margin-bottom: 25px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
+
+    /* FOOTER */
 
     footer {
       background: #061c12;
@@ -328,7 +427,10 @@
       color: white;
     }
 
+    /* MOBILE */
+
     @media (max-width: 800px) {
+
       .nav {
         flex-direction: column;
       }
@@ -338,20 +440,24 @@
         justify-content: center;
       }
 
-      .hero-content,
-      .markets {
+      .hero-content {
         grid-template-columns: 1fr;
       }
 
       .product-grid,
-      .steps {
+      .prebook-grid,
+      .steps,
+      .market-grid {
         grid-template-columns: 1fr 1fr;
       }
     }
 
     @media (max-width: 520px) {
+
       .product-grid,
-      .steps {
+      .prebook-grid,
+      .steps,
+      .market-grid {
         grid-template-columns: 1fr;
       }
 
@@ -362,7 +468,12 @@
       section {
         padding: 55px 20px;
       }
+
+      .product-card img {
+        height: 300px;
+      }
     }
+
   </style>
 </head>
 
@@ -370,236 +481,505 @@
 
 <header>
   <nav class="nav">
-    <a href="index.html" class="logo">Global<span>Import</span></a>
+
+    <a href="index.html" class="logo">
+      Global<span>Import</span>
+    </a>
 
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="vegetables.html">Vegetables</a>
-      <a href="#">Spices</a>
-      <a href="#">Textiles</a>
+      <a href="masala.html">Spices</a>
+      <a href="textiles.html">Textiles</a>
       <a href="#contact" class="quote-btn">Get a Quote</a>
     </div>
+
   </nav>
 </header>
 
+
 <main>
 
+  <!-- HERO -->
+
   <section class="hero">
+
     <div class="hero-content">
 
       <div>
-        <span class="tag">INDIA → SAUDI ARABIA & GULF</span>
 
-        <h1>Fresh Indian Vegetables for Global Markets</h1>
+        <span class="tag">
+          INDIA → INTERNATIONAL MARKETS
+        </span>
+
+        <h1>
+          Fresh Vegetables Direct From Farm
+        </h1>
 
         <p>
-          Global Import connects trusted Indian agricultural suppliers
-          with buyers across Saudi Arabia and the Gulf region.
-          We focus on quality sourcing, reliable supply and international trade.
+          Discover seasonal Indian vegetables sourced directly from farms
+          for international buyers. Selected crops can be pre-booked before
+          harvest and prepared for export when ready.
         </p>
 
         <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Request a Quote</a>
-          <a href="#products" class="btn btn-secondary">Explore Products</a>
+
+          <a href="#products" class="btn btn-primary">
+            Explore Farm Crops
+          </a>
+
+          <a href="#contact" class="btn btn-secondary">
+            Request a Quote
+          </a>
+
         </div>
+
       </div>
+
 
       <div class="hero-card">
-        <div class="emoji">🥬🥕🌶️</div>
-        <h2>Farm to International Market</h2>
+
+        <div class="emoji">
+          🌱🚜🥬
+        </div>
+
+        <h2>
+          Farm to Global Buyer
+        </h2>
+
         <p>
-          Carefully sourced vegetables from India for wholesalers,
-          distributors, retailers and food businesses.
+          We connect agricultural supply with international demand by
+          identifying suitable farm crops and exploring export opportunities
+          for buyers.
         </p>
+
       </div>
 
     </div>
+
   </section>
+
+
+  <!-- PRE BOOKING -->
+
+  <section class="prebook">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>
+          Pre-Book Upcoming Farm Crops
+        </h2>
+
+        <p>
+          Some vegetables require several weeks or months to reach harvest.
+          Buyers can express interest in an upcoming crop in advance so that
+          sourcing and export planning can begin early.
+        </p>
+
+      </div>
+
+
+      <div class="prebook-grid">
+
+        <div class="prebook-card">
+
+          <div class="prebook-icon">
+            🌱
+          </div>
+
+          <h3>
+            Crop in Growing Stage
+          </h3>
+
+          <p>
+            Selected farms may have vegetables currently being grown and
+            prepared for a future harvest.
+          </p>
+
+        </div>
+
+
+        <div class="prebook-card">
+
+          <div class="prebook-icon">
+            📅
+          </div>
+
+          <h3>
+            Advance Pre-Booking
+          </h3>
+
+          <p>
+            Buyers can enquire about upcoming crops before harvest and
+            discuss expected quantity, timing and destination.
+          </p>
+
+        </div>
+
+
+        <div class="prebook-card">
+
+          <div class="prebook-icon">
+            🌍
+          </div>
+
+          <h3>
+            Export Planning
+          </h3>
+
+          <p>
+            Once a requirement is agreed, the crop can be planned for
+            harvesting, preparation and international dispatch.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRODUCTS -->
 
   <section id="products" class="products">
+
     <div class="container">
 
       <div class="section-title">
-        <h2>Vegetables We Can Source</h2>
+
+        <h2>
+          Current Farm Opportunities
+        </h2>
+
         <p>
-          Our sourcing network can support different vegetable
-          requirements depending on season, destination and order volume.
+          Explore vegetables that may be available for seasonal sourcing
+          and advance pre-booking.
         </p>
+
       </div>
 
-      <img src="Vegetable.png" alt="Fresh Indian vegetables for export" class="vegetable-image">
+
       <div class="product-grid">
 
-        <div class="product-card">
-          <div class="product-icon">🧅</div>
-          <h3>Onions</h3>
-          <p>
-            Indian onions suitable for wholesale and international
-            distribution requirements.
-          </p>
-        </div>
+
+        <!-- BHINDI -->
 
         <div class="product-card">
-          <div class="product-icon">🥔</div>
-          <h3>Potatoes</h3>
-          <p>
-            Sourced according to buyer specifications, quantity and
-            destination-market requirements.
-          </p>
+
+          <a href="bhindi.html">
+
+            <img
+              src="bhindi-1.png"
+              alt="Fresh Bhindi Okra farm crop available for pre-booking">
+          </a>
+
+          <div class="product-content">
+
+            <span class="status">
+              🌱 PRE-BOOKING AVAILABLE
+            </span>
+
+            <h3>
+              Bhindi / Okra
+            </h3>
+
+            <p>
+              Fresh Indian bhindi sourced from farm cultivation.
+              Upcoming crops may be available for advance enquiry and
+              international export planning.
+            </p>
+
+            <div class="product-details">
+
+              <div>
+                <strong>Supply:</strong>
+                Seasonal farm crop
+              </div>
+
+              <div>
+                <strong>Availability:</strong>
+                Subject to harvest and crop condition
+              </div>
+
+              <div>
+                <strong>Market:</strong>
+                International buyers
+              </div>
+
+            </div>
+
+            <a href="bhindi.html" class="product-button">
+              View Bhindi Opportunity →
+            </a>
+
+          </div>
+
         </div>
 
-        <div class="product-card">
-          <div class="product-icon">🌶️</div>
-          <h3>Green Chillies</h3>
-          <p>
-            Fresh Indian chillies for food distributors and commercial
-            buyers.
-          </p>
-        </div>
+
+        <!-- POTATO -->
 
         <div class="product-card">
-          <div class="product-icon">🍅</div>
-          <h3>Tomatoes</h3>
-          <p>
-            Fresh produce sourcing based on availability, quality and
-            buyer requirements.
-          </p>
+
+          <a href="potato.html">
+
+            <img
+              src="potato-1.png"
+              alt="Fresh Indian potato farm crop available for pre-booking">
+          </a>
+
+          <div class="product-content">
+
+            <span class="status">
+              🌱 PRE-BOOKING AVAILABLE
+            </span>
+
+            <h3>
+              Potato
+            </h3>
+
+            <p>
+              Fresh Indian potatoes sourced from agricultural farms.
+              Upcoming production can be discussed in advance for
+              suitable international buyers.
+            </p>
+
+            <div class="product-details">
+
+              <div>
+                <strong>Supply:</strong>
+                Seasonal farm crop
+              </div>
+
+              <div>
+                <strong>Availability:</strong>
+                Subject to harvest and crop condition
+              </div>
+
+              <div>
+                <strong>Market:</strong>
+                International buyers
+              </div>
+
+            </div>
+
+            <a href="potato.html" class="product-button">
+              View Potato Opportunity →
+            </a>
+
+          </div>
+
         </div>
 
-        <div class="product-card">
-          <div class="product-icon">🥕</div>
-          <h3>Carrots</h3>
-          <p>
-            Vegetable sourcing for wholesalers, distributors and
-            commercial food businesses.
-          </p>
-        </div>
-
-        <div class="product-card">
-          <div class="product-icon">🥦</div>
-          <h3>Seasonal Vegetables</h3>
-          <p>
-            Ask us about additional vegetables available for export
-            depending on season and destination.
-          </p>
-        </div>
 
       </div>
+
     </div>
+
   </section>
 
-  <section>
-    <div class="container">
 
-      <div class="section-title">
-        <h2>Our Target Markets</h2>
-        <p>
-          We aim to build long-term relationships between Indian suppliers
-          and international buyers.
-        </p>
-      </div>
-
-      <div class="markets">
-
-        <div class="market-card">
-          <h3>🇸🇦 Saudi Arabia</h3>
-          <p>
-            Supplying fresh Indian vegetables to importers, wholesalers,
-            distributors and food businesses in Saudi Arabia.
-          </p>
-        </div>
-
-        <div class="market-card">
-          <h3>🌍 Gulf Countries</h3>
-          <p>
-            Exploring opportunities across the GCC and connecting Indian
-            agricultural supply with established regional buyers.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <!-- HOW IT WORKS -->
 
   <section class="process">
+
     <div class="container">
 
       <div class="section-title">
-        <h2>How We Work</h2>
+
+        <h2>
+          How Farm Pre-Booking Works
+        </h2>
+
         <p>
-          A straightforward approach to international sourcing and trade.
+          A simple sourcing process between farms, Global Import and
+          international buyers.
         </p>
+
       </div>
+
 
       <div class="steps">
 
-        <div class="step">
-          <div class="step-number">01</div>
-          <h3>Buyer Requirement</h3>
-          <p>
-            We understand the product, quantity, destination and
-            specifications required by the buyer.
-          </p>
-        </div>
 
         <div class="step">
-          <div class="step-number">02</div>
-          <h3>Supplier Sourcing</h3>
+
+          <div class="step-number">
+            01
+          </div>
+
+          <h3>
+            Farm Crop
+          </h3>
+
           <p>
-            We identify suitable Indian suppliers based on the
-            requirement.
+            A farmer or agricultural supplier provides information about
+            an upcoming vegetable crop.
           </p>
+
         </div>
 
-        <div class="step">
-          <div class="step-number">03</div>
-          <h3>Quality & Logistics</h3>
-          <p>
-            We coordinate commercial details and export logistics with
-            the relevant parties.
-          </p>
-        </div>
 
         <div class="step">
-          <div class="step-number">04</div>
-          <h3>International Trade</h3>
+
+          <div class="step-number">
+            02
+          </div>
+
+          <h3>
+            Global Import
+          </h3>
+
           <p>
-            We work toward reliable transactions and long-term
-            international business relationships.
+            We review the crop information and explore potential
+            international buyer requirements.
           </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            03
+          </div>
+
+          <h3>
+            Buyer Enquiry
+          </h3>
+
+          <p>
+            An interested buyer can request a quotation for the required
+            vegetable, quantity and destination.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            04
+          </div>
+
+          <h3>
+            Trade & Dispatch
+          </h3>
+
+          <p>
+            Once commercial terms are agreed, the relevant parties can
+            coordinate harvesting, preparation and export arrangements.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MARKETS -->
+
+  <section class="markets">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>
+          International Markets
+        </h2>
+
+        <p>
+          Our goal is to connect Indian agricultural supply with buyers
+          looking for reliable international sourcing opportunities.
+        </p>
+
+      </div>
+
+
+      <div class="market-grid">
+
+        <div class="market-card">
+
+          <h3>
+            🇸🇦 Saudi Arabia
+          </h3>
+
+          <p>
+            Exploring opportunities to supply fresh Indian vegetables to
+            importers, wholesalers, distributors and food businesses in
+            Saudi Arabia.
+          </p>
+
+        </div>
+
+
+        <div class="market-card">
+
+          <h3>
+            🌍 Gulf Countries
+          </h3>
+
+          <p>
+            Exploring agricultural sourcing opportunities across Gulf
+            markets based on product availability, buyer requirements
+            and export feasibility.
+          </p>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
+
+  <!-- CTA -->
+
   <section class="cta" id="contact">
+
     <div class="container">
 
-      <h2>Looking for Indian Vegetables?</h2>
+      <h2>
+        Looking for Fresh Indian Vegetables?
+      </h2>
 
       <p>
-        Tell us what you need, where you need it and the approximate
-        quantity. We'll get back to you with the next steps.
+        Tell us which vegetable you need, the approximate quantity,
+        destination and preferred delivery period. We can explore
+        suitable farm sourcing and provide a quotation.
       </p>
 
       <a
-        href="mailto:Mubarak@globalimport.in?subject=Vegetable%20Export%20Enquiry"
+        href="mailto:Mubarak@globalimport.in?subject=Fresh%20Vegetable%20Export%20Enquiry"
         class="btn btn-primary">
-        Send an Export Enquiry
+        Request a Quote
       </a>
 
     </div>
+
   </section>
 
 </main>
 
+
 <footer>
+
   <p>
-    <strong>Global Import</strong> — Connecting businesses, products
-    and opportunities across the world.
+    <strong>Global Import</strong>
+    — Connecting farms, businesses, products and opportunities worldwide.
   </p>
+
 </footer>
 
 </body>
