@@ -32,7 +32,135 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:10px;font-weight:800;border:1px solid var(--ink)}
 .btn.primary{background:var(--ink);color:#fff}
 .btn.secondary{background:#fff}
-.btn:hover{transform:translateY(-2px)}
+.btn:hover{transform:translateY(-2px)}/* =========================
+   GLOBAL IMPORT HERO SLIDER
+   ========================= */
+
+.hero-slider{
+  position:relative;
+  width:100%;
+  height:620px;
+  overflow:hidden;
+  border-radius:0;
+  background:#071b2f;
+}
+
+.hero-slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity 1s ease-in-out;
+  pointer-events:none;
+}
+
+.hero-slide.active{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.hero-slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    90deg,
+    rgba(0,0,0,.68) 0%,
+    rgba(0,0,0,.35) 45%,
+    rgba(0,0,0,.08) 100%
+  );
+}
+
+.hero-content{
+  position:absolute;
+  z-index:5;
+  left:7%;
+  top:50%;
+  transform:translateY(-50%);
+  max-width:650px;
+  color:#fff;
+}
+
+.hero-content .eyebrow{
+  display:inline-block;
+  margin-bottom:15px;
+  padding:8px 14px;
+  border:1px solid rgba(255,255,255,.45);
+  border-radius:999px;
+  background:rgba(0,0,0,.18);
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:1.4px;
+}
+
+.hero-content h1{
+  margin:0 0 18px;
+  font-size:clamp(38px,5vw,70px);
+  line-height:1.03;
+  letter-spacing:-2px;
+  color:#fff;
+}
+
+.hero-content p{
+  max-width:600px;
+  margin:0;
+  color:rgba(255,255,255,.9);
+  font-size:18px;
+  line-height:1.6;
+}
+
+.slider-dots{
+  position:absolute;
+  z-index:10;
+  left:7%;
+  bottom:28px;
+  display:flex;
+  gap:9px;
+}
+
+.slider-dot{
+  width:10px;
+  height:10px;
+  padding:0;
+  border:1px solid #fff;
+  border-radius:50%;
+  background:rgba(255,255,255,.45);
+  cursor:pointer;
+}
+
+.slider-dot.active{
+  width:30px;
+  border-radius:999px;
+  background:#fff;
+}
+
+@media(max-width:800px){
+  .hero-slider{
+    height:520px;
+  }
+
+  .hero-content{
+    left:6%;
+    right:6%;
+  }
+
+  .hero-content h1{
+    font-size:42px;
+  }
+
+  .hero-content p{
+    font-size:16px;
+  }
+
+  .slider-dots{
+    left:6%;
+  }
+}
 .trust{padding:28px 0;border-bottom:1px solid var(--line)}
 .trustrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#7a8494;font-size:13px;font-weight:700}
 section{padding:92px 0}
@@ -91,16 +219,77 @@ footer p{color:#aeb8c5;max-width:500px;margin-top:10px}
 </header>
 
 <main>
-<section class="hero">
-  <div class="container">
-    <div class="eyebrow">Worldwide Trade • Global Connections</div>
-    <h1>Moving ideas, products & <span>opportunities</span> across borders.</h1>
-    <p>Global Import is built around a simple idea: make international business clearer, more connected and easier to navigate.</p>
-    <div class="actions">
-      <a class="btn primary" href="#contact">Start a Conversation →</a>
-      <a class="btn secondary" href="#services">Explore Services</a>
-    </div>
+<section class="hero-slider">
+
+  <div class="hero-slide active">
+    <img src="slide-1.png" alt="Global Import international trade">
+    <div class="hero-overlay"></div>
   </div>
+
+  <div class="hero-slide">
+    <img src="slide-2.png" alt="Global Import agricultural exports">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-slide">
+    <img src="slide-3.png" alt="Global Import fresh vegetables">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-slide">
+    <img src="slide-4.png" alt="Global Import spices and food products">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-slide">
+    <img src="slide-5.png" alt="Global Import textiles and garments">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-slide">
+    <img src="slide-6.png" alt="Global Import worldwide business connections">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      WORLDWIDE TRADE • GLOBAL CONNECTIONS
+    </div>
+
+    <h1>
+      Moving products,<br>
+      <span>connecting markets.</span>
+    </h1>
+
+    <p>
+      Global Import connects suppliers, products and international
+      business opportunities across borders.
+    </p>
+
+    <div class="actions">
+      <a class="btn primary" href="#contact">
+        Start a Conversation →
+      </a>
+
+      <a class="btn secondary" href="#services">
+        Explore Services
+      </a>
+    </div>
+
+  </div>
+
+  <div class="slider-dots">
+
+    <button class="slider-dot active" aria-label="Slide 1"></button>
+    <button class="slider-dot" aria-label="Slide 2"></button>
+    <button class="slider-dot" aria-label="Slide 3"></button>
+    <button class="slider-dot" aria-label="Slide 4"></button>
+    <button class="slider-dot" aria-label="Slide 5"></button>
+    <button class="slider-dot" aria-label="Slide 6"></button>
+
+  </div>
+
 </section>
 
 <div class="trust">
@@ -177,6 +366,45 @@ footer p{color:#aeb8c5;max-width:500px;margin-top:10px}
     <div class="footerbottom">© 2026 Global Import. All rights reserved.</div>
   </div>
 </footer>
+
+<script>
+
+const slides = document.querySelectorAll(".hero-slide");
+const dots = document.querySelectorAll(".slider-dot");
+
+let currentSlide = 0;
+
+function showSlide(index){
+
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
+  });
+
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
+  });
+
+  currentSlide = index;
+}
+
+function nextSlide(){
+
+  currentSlide = (currentSlide + 1) % slides.length;
+
+  showSlide(currentSlide);
+}
+
+dots.forEach((dot, index) => {
+
+  dot.addEventListener("click", () => {
+    showSlide(index);
+  });
+
+});
+
+setInterval(nextSlide, 5000);
+
+</script>
 
 </body>
 </html>
