@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="description"
-        content="Premium Blazer collection by Global Import. Explore blazer styles for business, professional and formal wear.">
+        content="Premium Blazer collection by Global Import. Explore product details, fabric, construction, finishing and packaging.">
 
-  <title>Premium Blazers | Global Import</title>
+  <title>Premium Blazer | Global Import</title>
 
   <style>
     :root {
@@ -72,60 +72,99 @@
 
     .hero h1 {
       font-size: 42px;
-      margin-bottom: 15px;
       color: var(--dark);
+      margin-bottom: 15px;
     }
 
     .hero p {
-      max-width: 760px;
+      max-width: 780px;
       margin: auto;
       color: var(--muted);
       font-size: 18px;
     }
 
-    .section {
+    .product-section {
       max-width: 1150px;
       margin: auto;
       padding: 60px 7%;
     }
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
+    .product-image {
+      text-align: center;
+      margin-bottom: 45px;
     }
 
-    .product {
+    .product-image img {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      display: block;
+      margin: auto;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 30px rgba(16, 35, 63, 0.10);
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 35px;
+    }
+
+    .detail-card {
       border: 1px solid var(--line);
       border-radius: 14px;
-      overflow: hidden;
+      padding: 25px;
       background: white;
     }
 
-    .product img {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .product-content {
-      padding: 22px;
-    }
-
-    .product h2 {
+    .detail-card h2 {
       color: var(--dark);
-      font-size: 24px;
-      margin-bottom: 8px;
+      font-size: 22px;
+      margin-bottom: 10px;
     }
 
-    .product p {
+    .detail-card p {
       color: var(--muted);
+      font-size: 16px;
     }
 
-    .back {
+    .description {
+      margin-top: 45px;
       text-align: center;
-      margin-top: 40px;
+    }
+
+    .description h2 {
+      color: var(--dark);
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .description p {
+      max-width: 800px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .cta {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 55px 7%;
+      margin-top: 20px;
+    }
+
+    .cta h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      color: #dbe7f7;
     }
 
     .button {
@@ -136,6 +175,18 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 25px;
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -159,8 +210,12 @@
         font-size: 32px;
       }
 
-      .product img {
-        height: 300px;
+      .details {
+        grid-template-columns: 1fr;
+      }
+
+      .product-section {
+        padding: 40px 5%;
       }
     }
   </style>
@@ -182,80 +237,122 @@
   </nav>
 </header>
 
+
 <section class="hero">
 
-  <h1>Premium Blazer Collection</h1>
+  <h1>Premium Blazer</h1>
 
   <p>
-    Explore our selection of premium blazers suitable for business,
-    professional meetings, formal occasions and international sourcing.
+    A premium blazer designed for business, professional and formal
+    clothing requirements.
   </p>
 
 </section>
 
-<section class="section">
 
-  <div class="products">
+<section class="product-section">
 
-    <div class="product">
+  <div class="product-image">
 
-      <img src="blazer-1.png" alt="Premium Red Blazer">
+    <img
+      src="premium-blazer-details.png"
+      alt="Premium Blazer product details">
 
-      <div class="product-content">
+  </div>
 
-        <h2>Premium Red Blazer</h2>
 
-        <p>
-          Elegant premium blazer suitable for business meetings,
-          professional occasions and formal wear.
-        </p>
+  <div class="description">
 
-      </div>
+    <h2>Premium Blazer Details</h2>
+
+    <p>
+      Explore the Premium Blazer from different perspectives, including
+      the front and back appearance, inside construction, stitching,
+      finishing, fabric texture, buttons, pockets and packaging.
+    </p>
+
+  </div>
+
+
+  <div class="details">
+
+    <div class="detail-card">
+
+      <h2>🧥 Product Design</h2>
+
+      <p>
+        Detailed views of the blazer provide a clear look at its overall
+        design, front appearance and back construction.
+      </p>
 
     </div>
 
 
-    <div class="product">
+    <div class="detail-card">
 
-      <img src="blazer-2.png" alt="Premium Navy Blazer">
+      <h2>🧵 Stitching & Finishing</h2>
 
-      <div class="product-content">
-
-        <h2>Premium Navy Blazer</h2>
-
-        <p>
-          Classic navy blazer designed for professional,
-          business and formal clothing requirements.
-        </p>
-
-      </div>
+      <p>
+        Close-up views highlight stitching, thread work, seams and
+        finishing details of the garment.
+      </p>
 
     </div>
 
 
-    <div class="product">
+    <div class="detail-card">
 
-      <img src="blazer-3.png" alt="Premium Grey Blazer">
+      <h2>✨ Fabric & Texture</h2>
 
-      <div class="product-content">
+      <p>
+        Fabric and texture details are presented to help buyers understand
+        the material appearance and surface finish.
+      </p>
 
-        <h2>Premium Grey Blazer</h2>
+    </div>
 
-        <p>
-          Sophisticated grey blazer suitable for business,
-          formal events and professional occasions.
-        </p>
 
-      </div>
+    <div class="detail-card">
+
+      <h2>🔘 Buttons & Pockets</h2>
+
+      <p>
+        Product details include the blazer's buttons, pocket design and
+        other visible garment features.
+      </p>
+
+    </div>
+
+
+    <div class="detail-card">
+
+      <h2>📦 Packaging</h2>
+
+      <p>
+        Packaging presentation is included to provide buyers with a better
+        understanding of the product delivery presentation.
+      </p>
+
+    </div>
+
+
+    <div class="detail-card">
+
+      <h2>📏 Sizes & 🎨 Colours</h2>
+
+      <p>
+        Available sizes and colours can be discussed according to buyer
+        requirements and sourcing specifications.
+      </p>
 
     </div>
 
   </div>
 
 
-  <div class="back">
+  <div style="text-align:center;">
 
-    <a class="button" href="blazers.html">
+    <a class="back-button" href="blazers.html">
       ← Back to Blazer Collection
     </a>
 
@@ -263,8 +360,28 @@
 
 </section>
 
+
+<section class="cta">
+
+  <h2>Interested in This Blazer?</h2>
+
+  <p>
+    Tell us your required quantity, sizes, colours and sourcing
+    requirements. We can explore suitable international sourcing
+    opportunities.
+  </p>
+
+  <a class="button" href="mailto:Mubarak@globalimport.in">
+    Send Your Requirement
+  </a>
+
+</section>
+
+
 <footer>
+
   © 2026 Global Import. Connecting businesses, products and opportunities worldwide.
+
 </footer>
 
 </body>
