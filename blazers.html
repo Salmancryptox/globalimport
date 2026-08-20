@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Blazers sourced by Global Import for business, formal and professional apparel requirements.">
+
+  <title>Blazers | Global Import</title>
+
+  <style>
+    :root {
+      --blue: #155eef;
+      --dark: #10233f;
+      --light: #f4f8ff;
+      --text: #182b49;
+      --muted: #64748b;
+      --white: #ffffff;
+      --line: #dce5f2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--dark);
+      color: white;
+      padding: 18px 7%;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: var(--light);
+      padding: 70px 7%;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 18px;
+      color: var(--dark);
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 7%;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 30px;
+      color: var(--dark);
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 40px;
+      color: var(--muted);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .product {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: white;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(16, 35, 63, 0.10);
+    }
+
+    .product img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-content {
+      padding: 22px;
+    }
+
+    .product h3 {
+      color: var(--dark);
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .product p {
+      color: var(--muted);
+    }
+
+    .cta {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 55px 7%;
+    }
+
+    .cta h2 {
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      color: #dbe7f7;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--blue);
+      color: white;
+      padding: 13px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: var(--muted);
+      font-size: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 5px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .product img {
+        height: 320px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+
+    <div class="logo">
+      Global Import
+    </div>
+
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="vegetables.html">Vegetables</a>
+      <a href="masala.html">Masala & Spices</a>
+      <a href="textiles.html">Textiles</a>
+    </div>
+
+  </nav>
+</header>
+
+
+<section class="hero">
+
+  <h1>Blazers</h1>
+
+  <p>
+    Explore blazer styles sourced for business, formal wear,
+    professional occasions and international apparel requirements.
+  </p>
+
+</section>
+
+
+<section class="section">
+
+  <h2>Our Blazer Collection</h2>
+
+  <p class="section-intro">
+    A selection of blazer styles suitable for business,
+    professional and formal clothing requirements.
+  </p>
+
+
+  <div class="products">
+
+
+    <div class="product">
+
+      <img src="blazer-1.png" alt="Premium Blazer">
+
+      <div class="product-content">
+
+        <h3>Premium Blazer</h3>
+
+        <p>
+          Elegant blazer suitable for business meetings,
+          professional occasions and formal wear.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="product">
+
+      <img src="blazer-2.png" alt="Business Blazer">
+
+      <div class="product-content">
+
+        <h3>Business Blazer</h3>
+
+        <p>
+          Professional blazer style suitable for offices,
+          corporate wear and business events.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="product">
+
+      <img src="blazer-3.png" alt="Formal Blazer">
+
+      <div class="product-content">
+
+        <h3>Formal Blazer</h3>
+
+        <p>
+          Classic blazer option suitable for formal occasions,
+          events and professional apparel requirements.
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <h2>Looking for Blazers?</h2>
+
+  <p>
+    Tell us the blazer style, quantity, quality and other
+    requirements you are looking for.
+  </p>
+
+  <a class="button" href="mailto:Mubarak@globalimport.in">
+    Send Your Requirement
+  </a>
+
+</section>
+
+
+<footer>
+
+  © 2026 Global Import. Connecting businesses,
+  products and opportunities worldwide.
+
+</footer>
+
+</body>
+</html>
